@@ -1,11 +1,13 @@
 <template>
-  <div class="demo">
-    <h2>学生姓名:{{ name }}</h2>
+  <div>
+    <h2 @click="showName">学生姓名:{{ name }}</h2>
     <h2>学生年龄:{{ age }}</h2>
   </div>
 </template>
 
 <script>
+import { mixin, mimxn } from "../mixin";
+
 export default {
   name: "StudentName",
   data() {
@@ -14,11 +16,9 @@ export default {
       age: 10,
     };
   },
+  mixins: [mixin,mimxn],
 };
 </script>
 
-<style lang="css" scoped>
-.demo {
-  background: red;
-}
+<style>
 </style>

@@ -1,11 +1,12 @@
 <template>
-  <div class="demo">
-    <h2>学生姓名:{{ name }}</h2>
+  <div>
+    <h2 @click="showName">学生姓名:{{ name }}</h2>
     <h2>学生年龄:{{ age }}</h2>
   </div>
 </template>
 
 <script>
+
 export default {
   name: "StudentName",
   data() {
@@ -17,8 +18,5 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
-.demo {
-  background: red;
-}
+<style>
 </style>
