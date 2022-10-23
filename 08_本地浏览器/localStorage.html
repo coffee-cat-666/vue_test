@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage</title>
+</head>
+
+<body>
+    <h2>localStorage</h2>
+    <button onclick="save()">保存</button>
+    <button onclick="read()">读取</button>
+    <button onclick="remove()">删除</button>
+    <button onclick="clearAll()">清空</button>
+
+    <script>
+
+        let p = { name: '张三', age: 19 }
+        function save() {
+            localStorage.setItem('name', 'Tom')
+            localStorage.setItem('id', 11)
+            // 转换成对象存储
+            localStorage.setItem('person', JSON.stringify(p))
+        }
+
+        function read() {
+
+            console.log(localStorage.getItem('name'));
+            console.log(localStorage.getItem('id'));
+            console.log(JSON.parse(localStorage.getItem('person')));
+
+        }
+
+        function remove() {
+
+            localStorage.removeItem('name')
+            localStorage.removeItem('id')
+
+        }
+        function clearAll() {
+
+            localStorage.clear()
+
+        }
+    </script>
+
+
+</body>
+
+</html>
