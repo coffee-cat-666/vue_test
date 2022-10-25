@@ -3,10 +3,10 @@
     <!-- 通过父组件给子组件传递数据 -->
     <School :getByname="getByname"></School>
     <!-- 自定义组件 第二种写法使用@-->
-    <!-- <Student @atguigu="getStduentName"></Student> -->    
+    <Student @atguigu="getStduentName"></Student>
 
     <!-- 自定义组件 第二种写法使用ref -->
-    <Student ref="student"></Student>
+    <!-- <Student ref="student"></Student> -->
   </div>
 </template>
 
@@ -35,8 +35,7 @@ export default {
     // setTimeout(() => {
     //   this.$refs.student.$once("atguigu", this.getStduentName);
     // }, 3000);
-
-    this.$refs.student.$on("atguigu", this.getStduentName);
+    // this.$refs.student.$on("atguigu", this.getStduentName);
   },
 };
 </script>

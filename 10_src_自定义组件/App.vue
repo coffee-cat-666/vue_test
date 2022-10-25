@@ -3,10 +3,10 @@
     <!-- 通过父组件给子组件传递数据 -->
     <School :getByname="getByname"></School>
     <!-- 自定义组件 第二种写法使用@-->
-    <!-- <Student @atguigu="getStduentName"></Student> -->    
+    <Student @atguigu="getStduentName"></Student>    
 
     <!-- 自定义组件 第二种写法使用ref -->
-    <Student ref="student"></Student>
+    <!-- <Student ref="student"></Student> -->
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     getByname(name) {
-      console.log("收到了学校名：", name);
+      console.log("收到了学校名：", name);  
     },
     getStduentName(name, ...params) {
       // 接收变量，对象，数组的各种方法
@@ -36,7 +36,7 @@ export default {
     //   this.$refs.student.$once("atguigu", this.getStduentName);
     // }, 3000);
 
-    this.$refs.student.$on("atguigu", this.getStduentName);
+    // this.$refs.student.$on("atguigu", this.getStduentName);
   },
 };
 </script>
